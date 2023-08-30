@@ -1,0 +1,1448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\SixLabors.ImageSharp.3.0.1\build\SixLabors.ImageSharp.props" Condition="Exists('..\packages\SixLabors.ImageSharp.3.0.1\build\SixLabors.ImageSharp.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DDA9C08-4E5E-49AE-9DAC-E48EDABF4B0A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DESKTOP_APP</RootNamespace>
+    <AssemblyName>DESKTOP_APP</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\djaaf\Downloads\published\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A8A053216645204B27277796AA9976A2D524422E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DESKTOP_APP_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Internet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BitMiracle.LibTiff.NET, Version=2.4.649.0, Culture=neutral, PublicKeyToken=53879b3e20e7a7d6, processorArchitecture=MSIL">
+      <HintPath>..\packages\BitMiracle.LibTiff.NET.2.4.649\lib\net40\BitMiracle.LibTiff.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\..\Downloads\icons app_desk\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.93.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.93.1\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\..\..\Downloads\icons app_desk\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.20.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.20.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember.Signed, Version=1.3.0.0, Culture=neutral, PublicKeyToken=9e8f22703bef9a29, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.Signed.1.3.0\lib\net45\FastMember.Signed.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\..\Downloads\icons app_desk\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\..\Downloads\icons app_desk\GunaFrameWorkCracked-main\GunaFrameWorkCracked-main\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="IronSoftware.Drawing.Common, Version=2023.3.3.0, Culture=neutral, PublicKeyToken=8d7e55c97b3e9835, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronSoftware.System.Drawing.2023.3.3\lib\netstandard2.0\IronSoftware.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.5.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="Z.Dapper.Plus, Version=5.0.2.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.Dapper.Plus.5.0.2\lib\net45\Z.Dapper.Plus.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net48\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.ImageSharp.V2, Version=0.16.15.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.Bindings.ImageSharp.V2.0.16.15\lib\net472\ZXing.ImageSharp.V2.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net48\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="archiveform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="archiveform.Designer.cs">
+      <DependentUpon>archiveform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="attendance.Designer.cs">
+      <DependentUpon>attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="backupcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="backupcode.Designer.cs">
+      <DependentUpon>backupcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dbconnect1.cs" />
+    <Compile Include="editfrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editfrom.Designer.cs">
+      <DependentUpon>editfrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exelform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exelform.Designer.cs">
+      <DependentUpon>Exelform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="filter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="filter.Designer.cs">
+      <DependentUpon>filter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liststudentform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liststudentform.Designer.cs">
+      <DependentUpon>liststudentform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loading.Designer.cs">
+      <DependentUpon>loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="meal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="meal.Designer.cs">
+      <DependentUpon>meal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mealfilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mealfilter.Designer.cs">
+      <DependentUpon>mealfilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mealmanage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mealmanage.Designer.cs">
+      <DependentUpon>mealmanage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="others.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="others.Designer.cs">
+      <DependentUpon>others.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staff.Designer.cs">
+      <DependentUpon>staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staffAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staffAdd.Designer.cs">
+      <DependentUpon>staffAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staffPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staffPass.Designer.cs">
+      <DependentUpon>staffPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="statsform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="statsform.Designer.cs">
+      <DependentUpon>statsform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="statsform2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="statsform2.Designer.cs">
+      <DependentUpon>statsform2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentCard.Designer.cs">
+      <DependentUpon>StudentCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentimage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentimage.Designer.cs">
+      <DependentUpon>studentimage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_managDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Student_managDataSet2.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="archiveform.resx">
+      <DependentUpon>archiveform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attendance.resx">
+      <DependentUpon>attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="backupcode.resx">
+      <DependentUpon>backupcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editfrom.resx">
+      <DependentUpon>editfrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exelform.resx">
+      <DependentUpon>Exelform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="filter.resx">
+      <DependentUpon>filter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="liststudentform.resx">
+      <DependentUpon>liststudentform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loading.resx">
+      <DependentUpon>loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="meal.resx">
+      <DependentUpon>meal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mealfilter.resx">
+      <DependentUpon>mealfilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mealmanage.resx">
+      <DependentUpon>mealmanage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="others.resx">
+      <DependentUpon>others.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="staff.resx">
+      <DependentUpon>staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffAdd.resx">
+      <DependentUpon>staffAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffPass.resx">
+      <DependentUpon>staffPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="statsform.resx">
+      <DependentUpon>statsform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="statsform2.resx">
+      <DependentUpon>statsform2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentCard.resx">
+      <DependentUpon>StudentCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentimage.resx">
+      <DependentUpon>studentimage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="DESKTOP_APP_TemporaryKey.pfx" />
+    <None Include="icon\Order_Form_excel_download-1-2.xlsx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\Student.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Student_managDataSet2.xsc">
+      <DependentUpon>Student_managDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Student_managDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Student_managDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Student_managDataSet2.xss">
+      <DependentUpon>Student_managDataSet2.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon\add %281%29.png" />
+    <Content Include="icon\add-18.png" />
+    <Content Include="icon\add-23.png" />
+    <Content Include="icon\add-circle-svgrepo-com.png" />
+    <Content Include="icon\add-circle-svgrepo-com3.png" />
+    <Content Include="icon\add.png" />
+    <Content Include="icon\add_22px.png" />
+    <Content Include="icon\add_resized_33px.png" />
+    <Content Include="icon\add_student_64.png" />
+    <Content Include="icon\add_student_blue_32.png" />
+    <Content Include="icon\application.png" />
+    <Content Include="icon\archive.png" />
+    <Content Include="icon\archives.png" />
+    <Content Include="icon\attendant-list.png" />
+    <Content Include="icon\binder %281%29.png" />
+    <Content Include="icon\binder.png" />
+    <Content Include="icon\cat-g9d735121e_640.jpg" />
+    <Content Include="icon\close %281%29.png" />
+    <Content Include="icon\close %282%29.png" />
+    <Content Include="icon\close %283%29.png" />
+    <Content Include="icon\close %284%29.png" />
+    <Content Include="icon\close %285%29.png" />
+    <Content Include="icon\close %286%29.png" />
+    <Content Include="icon\close.png" />
+    <Content Include="icon\delete %281%29.png" />
+    <Content Include="icon\delete-1.png" />
+    <Content Include="icon\delete-2-svgrepo-com.png" />
+    <Content Include="icon\delete-user %281%29.png" />
+    <Content Include="icon\delete-user.png" />
+    <Content Include="icon\delete.png" />
+    <Content Include="icon\door %281%29.png" />
+    <Content Include="icon\door.png" />
+    <Content Include="icon\edit %281%29.png" />
+    <Content Include="icon\edit %282%29.png" />
+    <Content Include="icon\edit.png" />
+    <Content Include="icon\filter-svgrepo-com.png" />
+    <Content Include="icon\filter.png" />
+    <Content Include="icon\graduate-student-avatar.png" />
+    <Content Include="icon\Group 159.png" />
+    <Content Include="icon\id-card.png" />
+    <Content Include="icon\lastones\delete-1.png" />
+    <Content Include="icon\lastones\delete-2-svgrepo-com.png" />
+    <Content Include="icon\lastones\filter-svgrepo-com.png" />
+    <Content Include="icon\lastones\management blue.png" />
+    <Content Include="icon\lastones\meal-1.png" />
+    <Content Include="icon\lastones\meal-10.png" />
+    <Content Include="icon\lastones\meal-11.png" />
+    <Content Include="icon\lastones\meal-12-svgrepo-com.png" />
+    <Content Include="icon\lastones\meal-12.png" />
+    <Content Include="icon\lastones\meal-13.png" />
+    <Content Include="icon\lastones\meal-14.png" />
+    <Content Include="icon\lastones\meal-15.png" />
+    <Content Include="icon\lastones\meal-16.png" />
+    <Content Include="icon\lastones\meal-17.png" />
+    <Content Include="icon\lastones\meal-18.png" />
+    <Content Include="icon\lastones\meal-19.png" />
+    <Content Include="icon\lastones\meal-2.png" />
+    <Content Include="icon\lastones\meal-20.png" />
+    <Content Include="icon\lastones\meal-21.png" />
+    <Content Include="icon\lastones\meal-22.png" />
+    <Content Include="icon\lastones\meal-23.png" />
+    <Content Include="icon\lastones\meal-24.png" />
+    <Content Include="icon\lastones\meal-25.png" />
+    <Content Include="icon\lastones\meal-26.png" />
+    <Content Include="icon\lastones\meal-27.png" />
+    <Content Include="icon\lastones\meal-28.png" />
+    <Content Include="icon\lastones\meal-29.png" />
+    <Content Include="icon\lastones\meal-3.png" />
+    <Content Include="icon\lastones\meal-30.png" />
+    <Content Include="icon\lastones\meal-31.png" />
+    <Content Include="icon\lastones\meal-32.png" />
+    <Content Include="icon\lastones\meal-33.png" />
+    <Content Include="icon\lastones\meal-34.png" />
+    <Content Include="icon\lastones\meal-35.png" />
+    <Content Include="icon\lastones\meal-36.png" />
+    <Content Include="icon\lastones\meal-37.png" />
+    <Content Include="icon\lastones\meal-38.png" />
+    <Content Include="icon\lastones\meal-39.png" />
+    <Content Include="icon\lastones\meal-4.png" />
+    <Content Include="icon\lastones\meal-40.png" />
+    <Content Include="icon\lastones\meal-41.png" />
+    <Content Include="icon\lastones\meal-42.png" />
+    <Content Include="icon\lastones\meal-43.png" />
+    <Content Include="icon\lastones\meal-44.png" />
+    <Content Include="icon\lastones\meal-45.png" />
+    <Content Include="icon\lastones\meal-46.png" />
+    <Content Include="icon\lastones\meal-47.png" />
+    <Content Include="icon\lastones\meal-48.png" />
+    <Content Include="icon\lastones\meal-49.png" />
+    <Content Include="icon\lastones\meal-5.png" />
+    <Content Include="icon\lastones\meal-50.png" />
+    <Content Include="icon\lastones\meal-51.png" />
+    <Content Include="icon\lastones\meal-52.png" />
+    <Content Include="icon\lastones\meal-53.png" />
+    <Content Include="icon\lastones\meal-54.png" />
+    <Content Include="icon\lastones\meal-55.png" />
+    <Content Include="icon\lastones\meal-56.png" />
+    <Content Include="icon\lastones\meal-57.png" />
+    <Content Include="icon\lastones\meal-58.png" />
+    <Content Include="icon\lastones\meal-59.png" />
+    <Content Include="icon\lastones\meal-6.png" />
+    <Content Include="icon\lastones\meal-60.png" />
+    <Content Include="icon\lastones\meal-61.png" />
+    <Content Include="icon\lastones\meal-62.png" />
+    <Content Include="icon\lastones\meal-63.png" />
+    <Content Include="icon\lastones\meal-64.png" />
+    <Content Include="icon\lastones\meal-65.png" />
+    <Content Include="icon\lastones\meal-66.png" />
+    <Content Include="icon\lastones\meal-67.png" />
+    <Content Include="icon\lastones\meal-68.png" />
+    <Content Include="icon\lastones\meal-69.png" />
+    <Content Include="icon\lastones\meal-7.png" />
+    <Content Include="icon\lastones\meal-70.png" />
+    <Content Include="icon\lastones\meal-71.png" />
+    <Content Include="icon\lastones\meal-72.png" />
+    <Content Include="icon\lastones\meal-73.png" />
+    <Content Include="icon\lastones\meal-74.png" />
+    <Content Include="icon\lastones\meal-75.png" />
+    <Content Include="icon\lastones\meal-76.png" />
+    <Content Include="icon\lastones\meal-77.png" />
+    <Content Include="icon\lastones\meal-78.png" />
+    <Content Include="icon\lastones\meal-8.png" />
+    <Content Include="icon\lastones\meal-9.png" />
+    <Content Include="icon\lastones\rar-svgrepo-com-1.png" />
+    <Content Include="icon\lastones\rar-svgrepo-com-2.png" />
+    <Content Include="icon\lastones\rar-svgrepo-com-3.png" />
+    <Content Include="icon\lastones\rar-svgrepo-com-4.png" />
+    <Content Include="icon\lastones\rar-svgrepo-com-5.png" />
+    <Content Include="icon\lastones\rar-svgrepo-com-6.png" />
+    <Content Include="icon\lastones\rar-svgrepo-com-7.png" />
+    <Content Include="icon\lastones\rar-svgrepo-com-8.png" />
+    <Content Include="icon\lastones\rar-svgrepo-com.png" />
+    <Content Include="icon\lastones\search-svgrepo-com.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-1.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-10.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-11.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-12.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-13.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-14.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-15.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-16.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-17.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-18.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-19.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-2.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-20.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-21.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-22.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-23.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-24.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-25.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-26.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-27.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-28.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-29.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-3.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-30.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-31.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-32.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-33.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-34.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-35.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-36.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-37.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-38.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-39.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-4.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-40.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-41.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-42.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-43.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-44.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-45.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-46.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-47.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-48.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-49.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-5.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-50.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-51.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-52.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-53.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-54.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-55.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-56.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-57.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-58.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-59.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-6.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-60.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-61.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-62.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-63.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-64.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-65.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-66.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-67.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-68.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-69.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-7.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-70.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-71.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-72.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-73.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-74.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-75.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-76.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-77.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-78.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-8.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com-9.png" />
+    <Content Include="icon\lastones\statistics-svgrepo-com.png" />
+    <Content Include="icon\lastones\student-person-1.png" />
+    <Content Include="icon\lastones\student-person-10.png" />
+    <Content Include="icon\lastones\student-person-11.png" />
+    <Content Include="icon\lastones\student-person-12.png" />
+    <Content Include="icon\lastones\student-person-13.png" />
+    <Content Include="icon\lastones\student-person-14.png" />
+    <Content Include="icon\lastones\student-person-15.png" />
+    <Content Include="icon\lastones\student-person-16.png" />
+    <Content Include="icon\lastones\student-person-17.png" />
+    <Content Include="icon\lastones\student-person-18.png" />
+    <Content Include="icon\lastones\student-person-19.png" />
+    <Content Include="icon\lastones\student-person-2.png" />
+    <Content Include="icon\lastones\student-person-20.png" />
+    <Content Include="icon\lastones\student-person-21.png" />
+    <Content Include="icon\lastones\student-person-22.png" />
+    <Content Include="icon\lastones\student-person-23.png" />
+    <Content Include="icon\lastones\student-person-24.png" />
+    <Content Include="icon\lastones\student-person-25.png" />
+    <Content Include="icon\lastones\student-person-26.png" />
+    <Content Include="icon\lastones\student-person-27.png" />
+    <Content Include="icon\lastones\student-person-28.png" />
+    <Content Include="icon\lastones\student-person-29.png" />
+    <Content Include="icon\lastones\student-person-3-svgrepo-com.png" />
+    <Content Include="icon\lastones\student-person-3.png" />
+    <Content Include="icon\lastones\student-person-30.png" />
+    <Content Include="icon\lastones\student-person-31.png" />
+    <Content Include="icon\lastones\student-person-32.png" />
+    <Content Include="icon\lastones\student-person-33.png" />
+    <Content Include="icon\lastones\student-person-34.png" />
+    <Content Include="icon\lastones\student-person-35.png" />
+    <Content Include="icon\lastones\student-person-36.png" />
+    <Content Include="icon\lastones\student-person-37.png" />
+    <Content Include="icon\lastones\student-person-38.png" />
+    <Content Include="icon\lastones\student-person-39.png" />
+    <Content Include="icon\lastones\student-person-4.png" />
+    <Content Include="icon\lastones\student-person-40.png" />
+    <Content Include="icon\lastones\student-person-41.png" />
+    <Content Include="icon\lastones\student-person-42.png" />
+    <Content Include="icon\lastones\student-person-43.png" />
+    <Content Include="icon\lastones\student-person-44.png" />
+    <Content Include="icon\lastones\student-person-45.png" />
+    <Content Include="icon\lastones\student-person-46.png" />
+    <Content Include="icon\lastones\student-person-47.png" />
+    <Content Include="icon\lastones\student-person-48.png" />
+    <Content Include="icon\lastones\student-person-49.png" />
+    <Content Include="icon\lastones\student-person-5.png" />
+    <Content Include="icon\lastones\student-person-50.png" />
+    <Content Include="icon\lastones\student-person-51.png" />
+    <Content Include="icon\lastones\student-person-52.png" />
+    <Content Include="icon\lastones\student-person-53.png" />
+    <Content Include="icon\lastones\student-person-54.png" />
+    <Content Include="icon\lastones\student-person-55.png" />
+    <Content Include="icon\lastones\student-person-56.png" />
+    <Content Include="icon\lastones\student-person-57.png" />
+    <Content Include="icon\lastones\student-person-58.png" />
+    <Content Include="icon\lastones\student-person-59.png" />
+    <Content Include="icon\lastones\student-person-6.png" />
+    <Content Include="icon\lastones\student-person-60.png" />
+    <Content Include="icon\lastones\student-person-61.png" />
+    <Content Include="icon\lastones\student-person-62.png" />
+    <Content Include="icon\lastones\student-person-63.png" />
+    <Content Include="icon\lastones\student-person-64.png" />
+    <Content Include="icon\lastones\student-person-65.png" />
+    <Content Include="icon\lastones\student-person-66.png" />
+    <Content Include="icon\lastones\student-person-67.png" />
+    <Content Include="icon\lastones\student-person-68.png" />
+    <Content Include="icon\lastones\student-person-69.png" />
+    <Content Include="icon\lastones\student-person-7.png" />
+    <Content Include="icon\lastones\student-person-70.png" />
+    <Content Include="icon\lastones\student-person-71.png" />
+    <Content Include="icon\lastones\student-person-72.png" />
+    <Content Include="icon\lastones\student-person-73.png" />
+    <Content Include="icon\lastones\student-person-74.png" />
+    <Content Include="icon\lastones\student-person-75.png" />
+    <Content Include="icon\lastones\student-person-76.png" />
+    <Content Include="icon\lastones\student-person-77.png" />
+    <Content Include="icon\lastones\student-person-78.png" />
+    <Content Include="icon\lastones\student-person-8.png" />
+    <Content Include="icon\lastones\student-person-9.png" />
+    <Content Include="icon\lunch %281%29.png" />
+    <Content Include="icon\lunch %282%29.png" />
+    <Content Include="icon\lunch.png" />
+    <Content Include="icon\man %281%29.png" />
+    <Content Include="icon\man %282%29.png" />
+    <Content Include="icon\man %283%29.png" />
+    <Content Include="icon\man.png" />
+    <Content Include="icon\meal-1.png" />
+    <Content Include="icon\meal-10.png" />
+    <Content Include="icon\meal-11.png" />
+    <Content Include="icon\meal-12-svgrepo-com.png" />
+    <Content Include="icon\meal-12.png" />
+    <Content Include="icon\meal-13.png" />
+    <Content Include="icon\meal-14.png" />
+    <Content Include="icon\meal-15.png" />
+    <Content Include="icon\meal-16.png" />
+    <Content Include="icon\meal-17.png" />
+    <Content Include="icon\meal-18.png" />
+    <Content Include="icon\meal-19.png" />
+    <Content Include="icon\meal-2.png" />
+    <Content Include="icon\meal-20.png" />
+    <Content Include="icon\meal-21.png" />
+    <Content Include="icon\meal-22.png" />
+    <Content Include="icon\meal-23.png" />
+    <Content Include="icon\meal-24.png" />
+    <Content Include="icon\meal-25.png" />
+    <Content Include="icon\meal-26.png" />
+    <Content Include="icon\meal-27.png" />
+    <Content Include="icon\meal-28.png" />
+    <Content Include="icon\meal-29.png" />
+    <Content Include="icon\meal-3.png" />
+    <Content Include="icon\meal-30.png" />
+    <Content Include="icon\meal-31.png" />
+    <Content Include="icon\meal-32.png" />
+    <Content Include="icon\meal-33.png" />
+    <Content Include="icon\meal-34.png" />
+    <Content Include="icon\meal-35.png" />
+    <Content Include="icon\meal-36.png" />
+    <Content Include="icon\meal-37.png" />
+    <Content Include="icon\meal-38.png" />
+    <Content Include="icon\meal-39.png" />
+    <Content Include="icon\meal-4.png" />
+    <Content Include="icon\meal-40.png" />
+    <Content Include="icon\meal-41.png" />
+    <Content Include="icon\meal-42.png" />
+    <Content Include="icon\meal-43.png" />
+    <Content Include="icon\meal-44.png" />
+    <Content Include="icon\meal-45.png" />
+    <Content Include="icon\meal-46.png" />
+    <Content Include="icon\meal-47.png" />
+    <Content Include="icon\meal-48.png" />
+    <Content Include="icon\meal-49.png" />
+    <Content Include="icon\meal-5.png" />
+    <Content Include="icon\meal-50.png" />
+    <Content Include="icon\meal-51.png" />
+    <Content Include="icon\meal-52.png" />
+    <Content Include="icon\meal-53.png" />
+    <Content Include="icon\meal-54.png" />
+    <Content Include="icon\meal-55.png" />
+    <Content Include="icon\meal-56.png" />
+    <Content Include="icon\meal-57.png" />
+    <Content Include="icon\meal-58.png" />
+    <Content Include="icon\meal-59.png" />
+    <Content Include="icon\meal-6.png" />
+    <Content Include="icon\meal-60.png" />
+    <Content Include="icon\meal-61.png" />
+    <Content Include="icon\meal-7.png" />
+    <Content Include="icon\meal-8.png" />
+    <Content Include="icon\meal-9.png" />
+    <Content Include="icon\minimize %281%29.png" />
+    <Content Include="icon\minimize.png" />
+    <Content Include="icon\ndp481-web.exe" />
+    <Content Include="icon\newones\book.png" />
+    <Content Include="icon\newones\coordination.png" />
+    <Content Include="icon\newones\delete-1.png" />
+    <Content Include="icon\newones\delete-2-svgrepo-com.png" />
+    <Content Include="icon\newones\dining-room.png" />
+    <Content Include="icon\newones\dining.png" />
+    <Content Include="icon\newones\filter-svgrepo-com.png" />
+    <Content Include="icon\newones\graduation.png" />
+    <Content Include="icon\newones\immigration.png" />
+    <Content Include="icon\newones\meal-1.png" />
+    <Content Include="icon\newones\meal-10.png" />
+    <Content Include="icon\newones\meal-11.png" />
+    <Content Include="icon\newones\meal-12-svgrepo-com.png" />
+    <Content Include="icon\newones\meal-12.png" />
+    <Content Include="icon\newones\meal-13.png" />
+    <Content Include="icon\newones\meal-14.png" />
+    <Content Include="icon\newones\meal-15.png" />
+    <Content Include="icon\newones\meal-16.png" />
+    <Content Include="icon\newones\meal-17.png" />
+    <Content Include="icon\newones\meal-18.png" />
+    <Content Include="icon\newones\meal-19.png" />
+    <Content Include="icon\newones\meal-2.png" />
+    <Content Include="icon\newones\meal-20.png" />
+    <Content Include="icon\newones\meal-21.png" />
+    <Content Include="icon\newones\meal-22.png" />
+    <Content Include="icon\newones\meal-23.png" />
+    <Content Include="icon\newones\meal-24.png" />
+    <Content Include="icon\newones\meal-25.png" />
+    <Content Include="icon\newones\meal-26.png" />
+    <Content Include="icon\newones\meal-27.png" />
+    <Content Include="icon\newones\meal-28.png" />
+    <Content Include="icon\newones\meal-29.png" />
+    <Content Include="icon\newones\meal-3.png" />
+    <Content Include="icon\newones\meal-30.png" />
+    <Content Include="icon\newones\meal-31.png" />
+    <Content Include="icon\newones\meal-32.png" />
+    <Content Include="icon\newones\meal-33.png" />
+    <Content Include="icon\newones\meal-34.png" />
+    <Content Include="icon\newones\meal-35.png" />
+    <Content Include="icon\newones\meal-36.png" />
+    <Content Include="icon\newones\meal-37.png" />
+    <Content Include="icon\newones\meal-38.png" />
+    <Content Include="icon\newones\meal-39.png" />
+    <Content Include="icon\newones\meal-4.png" />
+    <Content Include="icon\newones\meal-40.png" />
+    <Content Include="icon\newones\meal-41.png" />
+    <Content Include="icon\newones\meal-42.png" />
+    <Content Include="icon\newones\meal-43.png" />
+    <Content Include="icon\newones\meal-44.png" />
+    <Content Include="icon\newones\meal-45.png" />
+    <Content Include="icon\newones\meal-46.png" />
+    <Content Include="icon\newones\meal-47.png" />
+    <Content Include="icon\newones\meal-48.png" />
+    <Content Include="icon\newones\meal-49.png" />
+    <Content Include="icon\newones\meal-5.png" />
+    <Content Include="icon\newones\meal-50.png" />
+    <Content Include="icon\newones\meal-51.png" />
+    <Content Include="icon\newones\meal-52.png" />
+    <Content Include="icon\newones\meal-53.png" />
+    <Content Include="icon\newones\meal-54.png" />
+    <Content Include="icon\newones\meal-55.png" />
+    <Content Include="icon\newones\meal-56.png" />
+    <Content Include="icon\newones\meal-57.png" />
+    <Content Include="icon\newones\meal-58.png" />
+    <Content Include="icon\newones\meal-59.png" />
+    <Content Include="icon\newones\meal-6.png" />
+    <Content Include="icon\newones\meal-60.png" />
+    <Content Include="icon\newones\meal-61.png" />
+    <Content Include="icon\newones\meal-7.png" />
+    <Content Include="icon\newones\meal-8.png" />
+    <Content Include="icon\newones\meal-9.png" />
+    <Content Include="icon\newones\print_FILL0_wght400_GRAD0_opsz48.png" />
+    <Content Include="icon\newones\rar-svgrepo-com-1.png" />
+    <Content Include="icon\newones\rar-svgrepo-com-2.png" />
+    <Content Include="icon\newones\rar-svgrepo-com-3.png" />
+    <Content Include="icon\newones\rar-svgrepo-com-4.png" />
+    <Content Include="icon\newones\rar-svgrepo-com-5.png" />
+    <Content Include="icon\newones\rar-svgrepo-com-6.png" />
+    <Content Include="icon\newones\rar-svgrepo-com-7.png" />
+    <Content Include="icon\newones\rar-svgrepo-com-8.png" />
+    <Content Include="icon\newones\rar-svgrepo-com.png" />
+    <Content Include="icon\newones\school.png" />
+    <Content Include="icon\newones\search-svgrepo-com.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-1.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-10.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-11.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-12.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-13.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-14.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-15.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-16.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-17.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-18.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-19.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-2.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-20.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-21.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-22.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-23.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-24.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-25.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-26.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-27.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-28.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-29.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-3.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-30.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-31.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-32.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-33.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-34.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-35.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-36.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-37.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-38.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-39.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-4.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-40.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-41.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-42.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-43.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-44.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-45.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-46.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-47.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-48.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-49.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-5.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-50.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-51.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-52.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-53.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-54.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-55.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-56.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-57.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-58.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-59.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-6.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-60.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-61.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-7.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-8.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com-9.png" />
+    <Content Include="icon\newones\statistics-svgrepo-com.png" />
+    <Content Include="icon\newones\student-person-1.png" />
+    <Content Include="icon\newones\student-person-10.png" />
+    <Content Include="icon\newones\student-person-11.png" />
+    <Content Include="icon\newones\student-person-12.png" />
+    <Content Include="icon\newones\student-person-13.png" />
+    <Content Include="icon\newones\student-person-14.png" />
+    <Content Include="icon\newones\student-person-15.png" />
+    <Content Include="icon\newones\student-person-16.png" />
+    <Content Include="icon\newones\student-person-17.png" />
+    <Content Include="icon\newones\student-person-18.png" />
+    <Content Include="icon\newones\student-person-19.png" />
+    <Content Include="icon\newones\student-person-2.png" />
+    <Content Include="icon\newones\student-person-20.png" />
+    <Content Include="icon\newones\student-person-21.png" />
+    <Content Include="icon\newones\student-person-22.png" />
+    <Content Include="icon\newones\student-person-23.png" />
+    <Content Include="icon\newones\student-person-24.png" />
+    <Content Include="icon\newones\student-person-25.png" />
+    <Content Include="icon\newones\student-person-26.png" />
+    <Content Include="icon\newones\student-person-27.png" />
+    <Content Include="icon\newones\student-person-28.png" />
+    <Content Include="icon\newones\student-person-29.png" />
+    <Content Include="icon\newones\student-person-3-svgrepo-com.png" />
+    <Content Include="icon\newones\student-person-3.png" />
+    <Content Include="icon\newones\student-person-30.png" />
+    <Content Include="icon\newones\student-person-31.png" />
+    <Content Include="icon\newones\student-person-32.png" />
+    <Content Include="icon\newones\student-person-33.png" />
+    <Content Include="icon\newones\student-person-34.png" />
+    <Content Include="icon\newones\student-person-35.png" />
+    <Content Include="icon\newones\student-person-36.png" />
+    <Content Include="icon\newones\student-person-37.png" />
+    <Content Include="icon\newones\student-person-38.png" />
+    <Content Include="icon\newones\student-person-39.png" />
+    <Content Include="icon\newones\student-person-4.png" />
+    <Content Include="icon\newones\student-person-40.png" />
+    <Content Include="icon\newones\student-person-41.png" />
+    <Content Include="icon\newones\student-person-42.png" />
+    <Content Include="icon\newones\student-person-43.png" />
+    <Content Include="icon\newones\student-person-44.png" />
+    <Content Include="icon\newones\student-person-45.png" />
+    <Content Include="icon\newones\student-person-46.png" />
+    <Content Include="icon\newones\student-person-47.png" />
+    <Content Include="icon\newones\student-person-48.png" />
+    <Content Include="icon\newones\student-person-49.png" />
+    <Content Include="icon\newones\student-person-5.png" />
+    <Content Include="icon\newones\student-person-50.png" />
+    <Content Include="icon\newones\student-person-51.png" />
+    <Content Include="icon\newones\student-person-52.png" />
+    <Content Include="icon\newones\student-person-53.png" />
+    <Content Include="icon\newones\student-person-54.png" />
+    <Content Include="icon\newones\student-person-55.png" />
+    <Content Include="icon\newones\student-person-56.png" />
+    <Content Include="icon\newones\student-person-57.png" />
+    <Content Include="icon\newones\student-person-58.png" />
+    <Content Include="icon\newones\student-person-59.png" />
+    <Content Include="icon\newones\student-person-6.png" />
+    <Content Include="icon\newones\student-person-60.png" />
+    <Content Include="icon\newones\student-person-61.png" />
+    <Content Include="icon\newones\student-person-7.png" />
+    <Content Include="icon\newones\student-person-8.png" />
+    <Content Include="icon\newones\student-person-9.png" />
+    <Content Include="icon\newones\study-group.png" />
+    <Content Include="icon\other.png" />
+    <Content Include="icon\other1.png" />
+    <Content Include="icon\otherones\delete-1.png" />
+    <Content Include="icon\otherones\delete-2-svgrepo-com.png" />
+    <Content Include="icon\otherones\filter-svgrepo-com.png" />
+    <Content Include="icon\otherones\Group 141.png" />
+    <Content Include="icon\otherones\management red-1.png" />
+    <Content Include="icon\otherones\management red.png" />
+    <Content Include="icon\otherones\management white.png" />
+    <Content Include="icon\otherones\meal-1.png" />
+    <Content Include="icon\otherones\meal-10.png" />
+    <Content Include="icon\otherones\meal-11.png" />
+    <Content Include="icon\otherones\meal-12-svgrepo-com.png" />
+    <Content Include="icon\otherones\meal-12.png" />
+    <Content Include="icon\otherones\meal-13.png" />
+    <Content Include="icon\otherones\meal-14.png" />
+    <Content Include="icon\otherones\meal-15.png" />
+    <Content Include="icon\otherones\meal-16.png" />
+    <Content Include="icon\otherones\meal-17.png" />
+    <Content Include="icon\otherones\meal-18.png" />
+    <Content Include="icon\otherones\meal-19.png" />
+    <Content Include="icon\otherones\meal-2.png" />
+    <Content Include="icon\otherones\meal-20.png" />
+    <Content Include="icon\otherones\meal-21.png" />
+    <Content Include="icon\otherones\meal-22.png" />
+    <Content Include="icon\otherones\meal-23.png" />
+    <Content Include="icon\otherones\meal-24.png" />
+    <Content Include="icon\otherones\meal-25.png" />
+    <Content Include="icon\otherones\meal-26.png" />
+    <Content Include="icon\otherones\meal-27.png" />
+    <Content Include="icon\otherones\meal-28.png" />
+    <Content Include="icon\otherones\meal-29.png" />
+    <Content Include="icon\otherones\meal-3.png" />
+    <Content Include="icon\otherones\meal-30.png" />
+    <Content Include="icon\otherones\meal-31.png" />
+    <Content Include="icon\otherones\meal-32.png" />
+    <Content Include="icon\otherones\meal-33.png" />
+    <Content Include="icon\otherones\meal-34.png" />
+    <Content Include="icon\otherones\meal-35.png" />
+    <Content Include="icon\otherones\meal-36.png" />
+    <Content Include="icon\otherones\meal-37.png" />
+    <Content Include="icon\otherones\meal-38.png" />
+    <Content Include="icon\otherones\meal-39.png" />
+    <Content Include="icon\otherones\meal-4.png" />
+    <Content Include="icon\otherones\meal-40.png" />
+    <Content Include="icon\otherones\meal-41.png" />
+    <Content Include="icon\otherones\meal-42.png" />
+    <Content Include="icon\otherones\meal-43.png" />
+    <Content Include="icon\otherones\meal-44.png" />
+    <Content Include="icon\otherones\meal-45.png" />
+    <Content Include="icon\otherones\meal-46.png" />
+    <Content Include="icon\otherones\meal-47.png" />
+    <Content Include="icon\otherones\meal-48.png" />
+    <Content Include="icon\otherones\meal-49.png" />
+    <Content Include="icon\otherones\meal-5.png" />
+    <Content Include="icon\otherones\meal-50.png" />
+    <Content Include="icon\otherones\meal-51.png" />
+    <Content Include="icon\otherones\meal-52.png" />
+    <Content Include="icon\otherones\meal-53.png" />
+    <Content Include="icon\otherones\meal-54.png" />
+    <Content Include="icon\otherones\meal-55.png" />
+    <Content Include="icon\otherones\meal-56.png" />
+    <Content Include="icon\otherones\meal-57.png" />
+    <Content Include="icon\otherones\meal-58.png" />
+    <Content Include="icon\otherones\meal-59.png" />
+    <Content Include="icon\otherones\meal-6.png" />
+    <Content Include="icon\otherones\meal-60.png" />
+    <Content Include="icon\otherones\meal-61.png" />
+    <Content Include="icon\otherones\meal-62.png" />
+    <Content Include="icon\otherones\meal-63.png" />
+    <Content Include="icon\otherones\meal-64.png" />
+    <Content Include="icon\otherones\meal-65.png" />
+    <Content Include="icon\otherones\meal-66.png" />
+    <Content Include="icon\otherones\meal-67.png" />
+    <Content Include="icon\otherones\meal-68.png" />
+    <Content Include="icon\otherones\meal-69.png" />
+    <Content Include="icon\otherones\meal-7.png" />
+    <Content Include="icon\otherones\meal-70.png" />
+    <Content Include="icon\otherones\meal-71.png" />
+    <Content Include="icon\otherones\meal-72.png" />
+    <Content Include="icon\otherones\meal-73.png" />
+    <Content Include="icon\otherones\meal-74.png" />
+    <Content Include="icon\otherones\meal-75.png" />
+    <Content Include="icon\otherones\meal-76.png" />
+    <Content Include="icon\otherones\meal-77.png" />
+    <Content Include="icon\otherones\meal-78.png" />
+    <Content Include="icon\otherones\meal-8.png" />
+    <Content Include="icon\otherones\meal-9.png" />
+    <Content Include="icon\otherones\password-svgrepo-com %28-1.png" />
+    <Content Include="icon\otherones\password-svgrepo-com %281%29.png" />
+    <Content Include="icon\otherones\rar-svgrepo-com-1.png" />
+    <Content Include="icon\otherones\rar-svgrepo-com-2.png" />
+    <Content Include="icon\otherones\rar-svgrepo-com-3.png" />
+    <Content Include="icon\otherones\rar-svgrepo-com-4.png" />
+    <Content Include="icon\otherones\rar-svgrepo-com-5.png" />
+    <Content Include="icon\otherones\rar-svgrepo-com-6.png" />
+    <Content Include="icon\otherones\rar-svgrepo-com-7.png" />
+    <Content Include="icon\otherones\rar-svgrepo-com-8.png" />
+    <Content Include="icon\otherones\rar-svgrepo-com.png" />
+    <Content Include="icon\otherones\search-svgrepo-com.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-1.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-10.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-11.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-12.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-13.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-14.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-15.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-16.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-17.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-18.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-19.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-2.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-20.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-21.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-22.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-23.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-24.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-25.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-26.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-27.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-28.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-29.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-3.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-30.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-31.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-32.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-33.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-34.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-35.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-36.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-37.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-38.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-39.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-4.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-40.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-41.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-42.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-43.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-44.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-45.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-46.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-47.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-48.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-49.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-5.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-50.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-51.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-52.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-53.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-54.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-55.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-56.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-57.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-58.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-59.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-6.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-60.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-61.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-62.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-63.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-64.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-65.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-66.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-67.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-68.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-69.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-7.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-70.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-71.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-72.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-73.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-74.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-75.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-76.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-77.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-78.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-8.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com-9.png" />
+    <Content Include="icon\otherones\statistics-svgrepo-com.png" />
+    <Content Include="icon\otherones\student-person-1.png" />
+    <Content Include="icon\otherones\student-person-10.png" />
+    <Content Include="icon\otherones\student-person-11.png" />
+    <Content Include="icon\otherones\student-person-12.png" />
+    <Content Include="icon\otherones\student-person-13.png" />
+    <Content Include="icon\otherones\student-person-14.png" />
+    <Content Include="icon\otherones\student-person-15.png" />
+    <Content Include="icon\otherones\student-person-16.png" />
+    <Content Include="icon\otherones\student-person-17.png" />
+    <Content Include="icon\otherones\student-person-18.png" />
+    <Content Include="icon\otherones\student-person-19.png" />
+    <Content Include="icon\otherones\student-person-2.png" />
+    <Content Include="icon\otherones\student-person-20.png" />
+    <Content Include="icon\otherones\student-person-21.png" />
+    <Content Include="icon\otherones\student-person-22.png" />
+    <Content Include="icon\otherones\student-person-23.png" />
+    <Content Include="icon\otherones\student-person-24.png" />
+    <Content Include="icon\otherones\student-person-25.png" />
+    <Content Include="icon\otherones\student-person-26.png" />
+    <Content Include="icon\otherones\student-person-27.png" />
+    <Content Include="icon\otherones\student-person-28.png" />
+    <Content Include="icon\otherones\student-person-29.png" />
+    <Content Include="icon\otherones\student-person-3-svgrepo-com.png" />
+    <Content Include="icon\otherones\student-person-3.png" />
+    <Content Include="icon\otherones\student-person-30.png" />
+    <Content Include="icon\otherones\student-person-31.png" />
+    <Content Include="icon\otherones\student-person-32.png" />
+    <Content Include="icon\otherones\student-person-33.png" />
+    <Content Include="icon\otherones\student-person-34.png" />
+    <Content Include="icon\otherones\student-person-35.png" />
+    <Content Include="icon\otherones\student-person-36.png" />
+    <Content Include="icon\otherones\student-person-37.png" />
+    <Content Include="icon\otherones\student-person-38.png" />
+    <Content Include="icon\otherones\student-person-39.png" />
+    <Content Include="icon\otherones\student-person-4.png" />
+    <Content Include="icon\otherones\student-person-40.png" />
+    <Content Include="icon\otherones\student-person-41.png" />
+    <Content Include="icon\otherones\student-person-42.png" />
+    <Content Include="icon\otherones\student-person-43.png" />
+    <Content Include="icon\otherones\student-person-44.png" />
+    <Content Include="icon\otherones\student-person-45.png" />
+    <Content Include="icon\otherones\student-person-46.png" />
+    <Content Include="icon\otherones\student-person-47.png" />
+    <Content Include="icon\otherones\student-person-48.png" />
+    <Content Include="icon\otherones\student-person-49.png" />
+    <Content Include="icon\otherones\student-person-5.png" />
+    <Content Include="icon\otherones\student-person-50.png" />
+    <Content Include="icon\otherones\student-person-51.png" />
+    <Content Include="icon\otherones\student-person-52.png" />
+    <Content Include="icon\otherones\student-person-53.png" />
+    <Content Include="icon\otherones\student-person-54.png" />
+    <Content Include="icon\otherones\student-person-55.png" />
+    <Content Include="icon\otherones\student-person-56.png" />
+    <Content Include="icon\otherones\student-person-57.png" />
+    <Content Include="icon\otherones\student-person-58.png" />
+    <Content Include="icon\otherones\student-person-59.png" />
+    <Content Include="icon\otherones\student-person-6.png" />
+    <Content Include="icon\otherones\student-person-60.png" />
+    <Content Include="icon\otherones\student-person-61.png" />
+    <Content Include="icon\otherones\student-person-62.png" />
+    <Content Include="icon\otherones\student-person-63.png" />
+    <Content Include="icon\otherones\student-person-64.png" />
+    <Content Include="icon\otherones\student-person-65.png" />
+    <Content Include="icon\otherones\student-person-66.png" />
+    <Content Include="icon\otherones\student-person-67.png" />
+    <Content Include="icon\otherones\student-person-68.png" />
+    <Content Include="icon\otherones\student-person-69.png" />
+    <Content Include="icon\otherones\student-person-7.png" />
+    <Content Include="icon\otherones\student-person-70.png" />
+    <Content Include="icon\otherones\student-person-71.png" />
+    <Content Include="icon\otherones\student-person-72.png" />
+    <Content Include="icon\otherones\student-person-73.png" />
+    <Content Include="icon\otherones\student-person-74.png" />
+    <Content Include="icon\otherones\student-person-75.png" />
+    <Content Include="icon\otherones\student-person-76.png" />
+    <Content Include="icon\otherones\student-person-77.png" />
+    <Content Include="icon\otherones\student-person-78.png" />
+    <Content Include="icon\otherones\student-person-8.png" />
+    <Content Include="icon\otherones\student-person-9.png" />
+    <Content Include="icon\output-onlinepngtools %281%29.png" />
+    <Content Include="icon\output-onlinepngtools.png" />
+    <Content Include="icon\Path 57.png" />
+    <Content Include="icon\Path 58.png" />
+    <Content Include="icon\Path 59.png" />
+    <Content Include="icon\Path 60.png" />
+    <Content Include="icon\Path 61.png" />
+    <Content Include="icon\Path 62.png" />
+    <Content Include="icon\Path 63.png" />
+    <Content Include="icon\Path 64.png" />
+    <Content Include="icon\Path 65.png" />
+    <Content Include="icon\Path 66.png" />
+    <Content Include="icon\Path 67.png" />
+    <Content Include="icon\Path 68.png" />
+    <Content Include="icon\Path 69.png" />
+    <Content Include="icon\Path 70.png" />
+    <Content Include="icon\pie-chart %281%29.png" />
+    <Content Include="icon\pie-chart.png" />
+    <Content Include="icon\plus %281%29.png" />
+    <Content Include="icon\plus.png" />
+    <Content Include="icon\printer.png" />
+    <Content Include="icon\rar-svgrepo-com-1.png" />
+    <Content Include="icon\rar-svgrepo-com-2.png" />
+    <Content Include="icon\rar-svgrepo-com-3.png" />
+    <Content Include="icon\rar-svgrepo-com-4.png" />
+    <Content Include="icon\rar-svgrepo-com-5.png" />
+    <Content Include="icon\rar-svgrepo-com-6.png" />
+    <Content Include="icon\rar-svgrepo-com-7.png" />
+    <Content Include="icon\rar-svgrepo-com-8.png" />
+    <Content Include="icon\rar-svgrepo-com.png" />
+    <Content Include="icon\refresh %281%29.png" />
+    <Content Include="icon\refresh %282%29.png" />
+    <Content Include="icon\refresh %283%29.png" />
+    <Content Include="icon\refresh.png" />
+    <Content Include="icon\resized_add_png.png" />
+    <Content Include="icon\search-svgrepo-com.png" />
+    <Content Include="icon\setting.png" />
+    <Content Include="icon\statistics-svgrepo-com-1.png" />
+    <Content Include="icon\statistics-svgrepo-com-10.png" />
+    <Content Include="icon\statistics-svgrepo-com-11.png" />
+    <Content Include="icon\statistics-svgrepo-com-12.png" />
+    <Content Include="icon\statistics-svgrepo-com-13.png" />
+    <Content Include="icon\statistics-svgrepo-com-14.png" />
+    <Content Include="icon\statistics-svgrepo-com-15.png" />
+    <Content Include="icon\statistics-svgrepo-com-16.png" />
+    <Content Include="icon\statistics-svgrepo-com-17.png" />
+    <Content Include="icon\statistics-svgrepo-com-18.png" />
+    <Content Include="icon\statistics-svgrepo-com-19.png" />
+    <Content Include="icon\statistics-svgrepo-com-2.png" />
+    <Content Include="icon\statistics-svgrepo-com-20.png" />
+    <Content Include="icon\statistics-svgrepo-com-21.png" />
+    <Content Include="icon\statistics-svgrepo-com-22.png" />
+    <Content Include="icon\statistics-svgrepo-com-23.png" />
+    <Content Include="icon\statistics-svgrepo-com-24.png" />
+    <Content Include="icon\statistics-svgrepo-com-25.png" />
+    <Content Include="icon\statistics-svgrepo-com-26.png" />
+    <Content Include="icon\statistics-svgrepo-com-27.png" />
+    <Content Include="icon\statistics-svgrepo-com-28.png" />
+    <Content Include="icon\statistics-svgrepo-com-29.png" />
+    <Content Include="icon\statistics-svgrepo-com-3.png" />
+    <Content Include="icon\statistics-svgrepo-com-30.png" />
+    <Content Include="icon\statistics-svgrepo-com-31.png" />
+    <Content Include="icon\statistics-svgrepo-com-32.png" />
+    <Content Include="icon\statistics-svgrepo-com-33.png" />
+    <Content Include="icon\statistics-svgrepo-com-34.png" />
+    <Content Include="icon\statistics-svgrepo-com-35.png" />
+    <Content Include="icon\statistics-svgrepo-com-36.png" />
+    <Content Include="icon\statistics-svgrepo-com-37.png" />
+    <Content Include="icon\statistics-svgrepo-com-38.png" />
+    <Content Include="icon\statistics-svgrepo-com-39.png" />
+    <Content Include="icon\statistics-svgrepo-com-4.png" />
+    <Content Include="icon\statistics-svgrepo-com-40.png" />
+    <Content Include="icon\statistics-svgrepo-com-41.png" />
+    <Content Include="icon\statistics-svgrepo-com-42.png" />
+    <Content Include="icon\statistics-svgrepo-com-43.png" />
+    <Content Include="icon\statistics-svgrepo-com-44.png" />
+    <Content Include="icon\statistics-svgrepo-com-45.png" />
+    <Content Include="icon\statistics-svgrepo-com-46.png" />
+    <Content Include="icon\statistics-svgrepo-com-47.png" />
+    <Content Include="icon\statistics-svgrepo-com-48.png" />
+    <Content Include="icon\statistics-svgrepo-com-49.png" />
+    <Content Include="icon\statistics-svgrepo-com-5.png" />
+    <Content Include="icon\statistics-svgrepo-com-50.png" />
+    <Content Include="icon\statistics-svgrepo-com-51.png" />
+    <Content Include="icon\statistics-svgrepo-com-52.png" />
+    <Content Include="icon\statistics-svgrepo-com-53.png" />
+    <Content Include="icon\statistics-svgrepo-com-54.png" />
+    <Content Include="icon\statistics-svgrepo-com-55.png" />
+    <Content Include="icon\statistics-svgrepo-com-56.png" />
+    <Content Include="icon\statistics-svgrepo-com-57.png" />
+    <Content Include="icon\statistics-svgrepo-com-58.png" />
+    <Content Include="icon\statistics-svgrepo-com-59.png" />
+    <Content Include="icon\statistics-svgrepo-com-6.png" />
+    <Content Include="icon\statistics-svgrepo-com-60.png" />
+    <Content Include="icon\statistics-svgrepo-com-61.png" />
+    <Content Include="icon\statistics-svgrepo-com-7.png" />
+    <Content Include="icon\statistics-svgrepo-com-8.png" />
+    <Content Include="icon\statistics-svgrepo-com-9.png" />
+    <Content Include="icon\statistics-svgrepo-com.png" />
+    <Content Include="icon\student %281%29.png" />
+    <Content Include="icon\student %282%29.png" />
+    <Content Include="icon\student %283%29.png" />
+    <Content Include="icon\student %284%29.png" />
+    <Content Include="icon\student %285%29.png" />
+    <Content Include="icon\student %286%29.png" />
+    <Content Include="icon\student %287%29.png" />
+    <Content Include="icon\student %288%29.png" />
+    <Content Include="icon\student %289%29.png" />
+    <Content Include="icon\student-person-1.png" />
+    <Content Include="icon\student-person-10.png" />
+    <Content Include="icon\student-person-11.png" />
+    <Content Include="icon\student-person-12.png" />
+    <Content Include="icon\student-person-13.png" />
+    <Content Include="icon\student-person-14.png" />
+    <Content Include="icon\student-person-15.png" />
+    <Content Include="icon\student-person-16.png" />
+    <Content Include="icon\student-person-17.png" />
+    <Content Include="icon\student-person-18.png" />
+    <Content Include="icon\student-person-19.png" />
+    <Content Include="icon\student-person-2.png" />
+    <Content Include="icon\student-person-20.png" />
+    <Content Include="icon\student-person-21.png" />
+    <Content Include="icon\student-person-22.png" />
+    <Content Include="icon\student-person-23.png" />
+    <Content Include="icon\student-person-24.png" />
+    <Content Include="icon\student-person-25.png" />
+    <Content Include="icon\student-person-26.png" />
+    <Content Include="icon\student-person-27.png" />
+    <Content Include="icon\student-person-28.png" />
+    <Content Include="icon\student-person-29.png" />
+    <Content Include="icon\student-person-3-svgrepo-com.png" />
+    <Content Include="icon\student-person-3.png" />
+    <Content Include="icon\student-person-30.png" />
+    <Content Include="icon\student-person-31.png" />
+    <Content Include="icon\student-person-32.png" />
+    <Content Include="icon\student-person-33.png" />
+    <Content Include="icon\student-person-34.png" />
+    <Content Include="icon\student-person-35.png" />
+    <Content Include="icon\student-person-36.png" />
+    <Content Include="icon\student-person-37.png" />
+    <Content Include="icon\student-person-38.png" />
+    <Content Include="icon\student-person-39.png" />
+    <Content Include="icon\student-person-4.png" />
+    <Content Include="icon\student-person-40.png" />
+    <Content Include="icon\student-person-41.png" />
+    <Content Include="icon\student-person-42.png" />
+    <Content Include="icon\student-person-43.png" />
+    <Content Include="icon\student-person-44.png" />
+    <Content Include="icon\student-person-45.png" />
+    <Content Include="icon\student-person-46.png" />
+    <Content Include="icon\student-person-47.png" />
+    <Content Include="icon\student-person-48.png" />
+    <Content Include="icon\student-person-49.png" />
+    <Content Include="icon\student-person-5.png" />
+    <Content Include="icon\student-person-50.png" />
+    <Content Include="icon\student-person-51.png" />
+    <Content Include="icon\student-person-52.png" />
+    <Content Include="icon\student-person-53.png" />
+    <Content Include="icon\student-person-54.png" />
+    <Content Include="icon\student-person-55.png" />
+    <Content Include="icon\student-person-56.png" />
+    <Content Include="icon\student-person-57.png" />
+    <Content Include="icon\student-person-58.png" />
+    <Content Include="icon\student-person-59.png" />
+    <Content Include="icon\student-person-6.png" />
+    <Content Include="icon\student-person-60.png" />
+    <Content Include="icon\student-person-61.png" />
+    <Content Include="icon\student-person-7.png" />
+    <Content Include="icon\student-person-8.png" />
+    <Content Include="icon\student-person-9.png" />
+    <Content Include="icon\student.png" />
+    <Content Include="icon\study-group.png" />
+    <Content Include="icon\upload.png" />
+    <Content Include="icon\user.png" />
+    <Content Include="Student_manag.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Student_manag_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Student_manag.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\SixLabors.ImageSharp.3.0.1\build\SixLabors.ImageSharp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SixLabors.ImageSharp.3.0.1\build\SixLabors.ImageSharp.props'))" />
+  </Target>
+</Project>
